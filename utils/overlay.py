@@ -62,7 +62,10 @@ def overlay_fg_on_bg(base_input_folder, base_output_folder):
               bg_mask.paste(fg_mask, (pos_x, pos_y), fg_mask)
 
               img_substring = "ol_" + "bg" + bg_num + "fg" + fg_num + str(i + 1) + flag + "_" + fg_img
-              bg.save(os.path.join(bgfg_overlay_folder, img_substring), optimize=True, quality=65, format="JPEG")
+              try:
+                bg.save(os.path.join(bgfg_overlay_folder, img_substring), optimize=True, quality=65, format="JPEG")
+              except:
+                bg.save(os.path.join(bgfg_overlay_folder, img_substring), optimize=True, quality=35)
               bg_mask.save(os.path.join(bgfg_mask_folder, "mask_" + img_substring), optimize=True, quality=65, format="JPEG")
               
               del fg
