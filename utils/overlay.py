@@ -29,7 +29,7 @@ def overlay_fg_on_bg(base_input_folder, base_output_folder):
         with Image.open(os.path.join(fg_img_folder, fg_img)).convert("RGBA") as mfg, \
           Image.open(os.path.join(fg_mask_folder, "mask_" + fg_img)) as mfg_mask:
 
-          for i in range(20):
+          for i in range(2):
             for should_flip in [True, False]:
               flag = ""
               bg = mbg.copy()
@@ -62,16 +62,13 @@ def overlay_fg_on_bg(base_input_folder, base_output_folder):
               bg_mask.paste(fg_mask, (pos_x, pos_y), fg_mask)
 
               img_substring = "ol_" + "bg" + bg_num + "fg" + fg_num + str(i + 1) + flag + "_" + fg_img
-              try:
-                bg.save(os.path.join(bgfg_overlay_folder, img_substring), optimize=True, quality=65, format="JPEG")
-              except:
-                bg.save(os.path.join(bgfg_overlay_folder, img_substring), optimize=True, quality=35)
+              bg.save(os.path.join(bgfg_overlay_folder, img_substring), optimize=True, quality=65, format="JPEG")
               bg_mask.save(os.path.join(bgfg_mask_folder, "mask_" + img_substring), optimize=True, quality=65, format="JPEG")
               
               del fg
               del bg
-        #if fidx == 0:
-        #    break    
+        if fidx == 0:
+            break    
     #if bidx == 0:
     #  break
 
