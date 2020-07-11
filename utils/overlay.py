@@ -3,22 +3,20 @@ import os
 import numpy as np
 from PIL import Image
 
-base_folder = os.path.join("C:\\", "Anurag", "Personal", "ML", "EVA", "github", "fg_bg_dataset")
-fg_img_folder = os.path.join(base_folder, "fg")
-fg_mask_folder = os.path.join(base_folder, "fg_mask")
-bg_img_folder = os.path.join(base_folder, "bg")
-bgfg_overlay_folder = os.path.join(base_folder, "bgfg_overlay")
-bgfg_mask_folder = os.path.join(base_folder, "bgfg_mask")
-
 flip_methods = [Image.FLIP_TOP_BOTTOM, Image.FLIP_LEFT_RIGHT, Image.ROTATE_90,
                   Image.ROTATE_180, Image.ROTATE_270, Image.TRANSPOSE, Image.TRANSVERSE]
 
-def overlay_fg_on_bg():
+def overlay_fg_on_bg(base_input_folder, base_output_folder):
+  fg_img_folder = os.path.join(base_input_folder, "fg")
+  fg_mask_folder = os.path.join(base_input_folder, "fg_mask")
+  bg_img_folder = os.path.join(base_input_folder, "bg")
+  bgfg_overlay_folder = os.path.join(base_output_folder, "bgfg_overlay")
+  bgfg_mask_folder = os.path.join(base_output_folder, "bgfg_mask")
+
   bg_imgs = sorted(os.listdir(bg_img_folder))
   fg_imgs = sorted(os.listdir(fg_img_folder))
   
   for bidx, bg_img in enumerate(bg_imgs):
-    print(bg_img)
     bg_num = bg_img.split('.')[0].split('_')[1]
     with Image.open(os.path.join(bg_img_folder, bg_img)) as mbg:
       for fidx, fg_img in enumerate(fg_imgs):
@@ -29,7 +27,7 @@ def overlay_fg_on_bg():
           for i in range(20):
             for should_flip in [True, False]:
               flag = ""
-              print(bg_img, fg_img, i, should_flip)
+              print("Processing: ", bg_img, fg_img, i, should_flip)
               bg = mbg.copy()
               fg = mfg.copy()
               fg_mask = mfg_mask.copy()
@@ -43,7 +41,6 @@ def overlay_fg_on_bg():
                 flag = "f"
                 
                 flip_method = flip_methods[pick_index]
-                print(flip_method)
                 fg = fg.transpose(flip_method)
                 fg_mask = fg_mask.transpose(flip_method)
 
@@ -70,5 +67,8 @@ def overlay_fg_on_bg():
         #    break
     #if bidx == 0:
     #  break
+
 if __name__ == '__main__':
-    overlay_fg_on_bg()
+    input_folder = os.path.join("C:\\", "Anurag", "Personal", "ML", "EVA", "github", "fg_bg_dataset")
+    output_folder = os.path.join("C:\\", "Anurag", "Personal", "ML", "EVA", "github", "fg_bg_dataset")
+    overlay_fg_on_bg(input_folder, output_folder)
