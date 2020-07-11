@@ -21,6 +21,7 @@ def overlay_fg_on_bg(base_input_folder, base_output_folder):
   pbar = tqdm(enumerate(bg_imgs))
 
   for bidx, bg_img in pbar:
+    pbar.set_description("Processing %s" % bg_img)
     bg_num = bg_img.split('.')[0].split('_')[1]
     with Image.open(os.path.join(bg_img_folder, bg_img)) as mbg:
       for fidx, fg_img in enumerate(fg_imgs):
@@ -29,7 +30,7 @@ def overlay_fg_on_bg(base_input_folder, base_output_folder):
         with Image.open(os.path.join(fg_img_folder, fg_img)).convert("RGBA") as mfg, \
           Image.open(os.path.join(fg_mask_folder, "mask_" + fg_img)) as mfg_mask:
 
-          for i in range(2):
+          for i in range(20):
             for should_flip in [True, False]:
               flag = ""
               bg = mbg.copy()
@@ -67,8 +68,6 @@ def overlay_fg_on_bg(base_input_folder, base_output_folder):
               
               del fg
               del bg
-        if fidx == 0:
-            break    
     #if bidx == 0:
     #  break
 
