@@ -58,7 +58,19 @@ Foreground-Background:
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_overlay/ol_bg010fg0101_fg_010.png" height="8%" width="8%" ></a>
 
 Foreground-Background Mask:
-<img src="images/fg_bg_mask_strip.png">
+
+
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg001fg0011_fg_001.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg002fg0021_fg_002.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg003fg0031_fg_003.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg011fg0111_fg_011.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg005fg0051_fg_005.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg006fg0061_fg_006.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg007fg0071_fg_007.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg008fg0081_fg_008.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg009fg0091_fg_009.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg010fg0101_fg_010.png" height="8%" width="8%" ></a>
+
 
 Foreground-Background Depth:
 <img src="images/fg_bg_depth_strip.png">
