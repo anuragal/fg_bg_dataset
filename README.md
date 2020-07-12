@@ -6,7 +6,19 @@ Create a custom dataset for monocular depth estimation and segmentation simultan
 
 ### Dataset Samples
 Background:
-<img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_001.jpg">
+
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_001.jpg" height="10%" width="10%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_002.jpg" height="10%" width="10%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_003.jpg" height="10%" width="10%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_004.jpg" height="10%" width="10%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_005.jpg" height="10%" width="10%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_006.jpg" height="10%" width="10%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_007.jpg" height="10%" width="10%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_008.jpg" height="10%" width="10%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_009.jpg" height="10%" width="10%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_010.jpg" height="10%" width="10%" ></a>
+
+<img src="">
 
 Foreground:
 <img src="images/fg_strip.png">
