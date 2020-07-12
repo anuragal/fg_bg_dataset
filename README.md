@@ -6,7 +6,7 @@ Create a custom dataset for monocular depth estimation and segmentation simultan
 
 ### Dataset Samples
 Background:
-<img src="images/bg_strip.png">
+<img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_001.jpg">
 
 Foreground:
 <img src="images/fg_strip.png">
