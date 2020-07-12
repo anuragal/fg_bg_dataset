@@ -30,9 +30,21 @@ Foreground:
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg/fg_008.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg/fg_009.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg/fg_010.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg/fg_011.png" height="8%" width="8%" ></a>
 
 Foreground Mask:
-<img src="images/fg_mask_strip.png">
+
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_001.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_002.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_003.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_004.png" height="4%" width="4%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_005.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_006.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_007.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_008.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_009.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_010.png" height="8%" width="8%" ></a>
+<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_011.png" height="8%" width="8%" ></a>
 
 Foreground-Background:
 <img src="images/fg_bg_strip.png">
