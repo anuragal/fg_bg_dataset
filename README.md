@@ -5,14 +5,14 @@
 Create a custom dataset for monocular depth estimation and segmentation simultaneously. Since we do not have access to a depth camera, we use a pre-trained depth model to generate the depth maps which will be used as the ground truth for our model.
 
 ## Dataset creation process
-1. Download background images from internet, from google images
-2. Download transparent foreground images from internet, from google images
+1. Download *Background* images from internet, from google images
+2. Download transparent *Foreground* images from internet, from google images
 3. Resize background & foreground images - [Code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/image_resize.py)
-4. Generate Mask images for all the foreground images - [Code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/mask.py)
-5. Generate Overlay images by putting foreground images over background images - [Code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/overlay.py) & [Colab](https://github.com/anuragal/fg_bg_dataset/blob/master/colab_overlay_mask_creation.ipynb)
+4. Generate *Mask* images for all the foreground images - [Code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/mask.py)
+5. Generate *Overlay* images by putting foreground images over background images - [Code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/overlay.py) & [Colab](https://github.com/anuragal/fg_bg_dataset/blob/master/colab_overlay_mask_creation.ipynb)
 6. Generate mask images for overlay images - [Code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/mask.py)
-7. Generate Depth maps for overlay images - [Colab](https://github.com/anuragal/DepthModel/blob/master/DenseDepth.ipynb)
-8. Calculate images dimensions - [Colab](https://github.com/anuragal/DepthModel/blob/master/generate_data_stats.ipynb)
+7. Generate *Depth maps* for overlay images - [Colab](https://github.com/anuragal/DepthModel/blob/master/DenseDepth.ipynb)
+8. Calculate *Images dimensions* - [Colab](https://github.com/anuragal/DepthModel/blob/master/generate_data_stats.ipynb)
 
 ## Dataset Link
 Link to dataset - https://drive.google.com/drive/folders/1IvKUbm4WcqNUS9dkOV_gPSfCtnmPIg8Y?usp=sharing
