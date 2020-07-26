@@ -131,3 +131,6 @@ Create a custom dataset for monocular depth estimation and segmentation simultan
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_depth/depth_ol_bg009fg0091_fg_009.jpg" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_depth/depth_ol_bg010fg0101_fg_010.jpg" height="8%" width="8%" ></a>
 
+
+## Disclaimer
+I don't own any of the above images, they are downloaded from google image search. These images are only used for learning purpose. Images are owned by respecive owners. 
