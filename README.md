@@ -23,7 +23,11 @@ Create a custom dataset for monocular depth estimation and segmentation simultan
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_009.jpg" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_010.jpg" height="8%" width="8%" ></a>
 
-Foreground:
+#### Foreground (fg)
+ - 99 Images of humans & very few animals with transparent background.
+ - Images were rescaled to keep height 140 and resizing width while maintaining aspect ratio. [Code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/image_resize.py) to resize
+ - Image dimensions: (140, width, 4)
+ - Directory size: 1.8M
 
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg/fg_001.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg/fg_002.png" height="8%" width="8%" ></a>
@@ -36,7 +40,14 @@ Foreground:
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg/fg_009.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg/fg_010.png" height="8%" width="8%" ></a>
 
-Foreground Mask:
+#### Foreground Mask (fg_mask)
+ - For every foreground its corresponding mask was created
+ - Using GIMP, the foreground was filled with white and the background was filled with black.
+ - Image was stored as a grayscale image.
+ - Each image was rescaled to keep height 105 and resizing width while maintaining aspect ratio.
+ - Number of images: 100
+ - Image dimensions: (105, width)
+ - Directory size: 404K
 
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_001.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_002.png" height="8%" width="8%" ></a>
