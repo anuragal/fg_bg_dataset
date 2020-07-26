@@ -25,7 +25,7 @@ Create a custom dataset for monocular depth estimation and segmentation simultan
 
 #### Foreground (fg)
  - 99 Images of humans & very few animals with transparent background.
- - Images were rescaled to keep height 140 and resizing width while maintaining aspect ratio. [Code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/image_resize.py) to resize
+ - Images were rescaled to keep height 140 and resizing width while maintaining aspect ratio. [Code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/image_resize.py) to resize images
  - Image dimensions: (140, width, 4)
  - Directory size: 1.8M
 
@@ -41,15 +41,12 @@ Create a custom dataset for monocular depth estimation and segmentation simultan
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg/fg_010.png" height="8%" width="8%" ></a>
 
 #### Foreground Mask (fg_mask)
- - For every foreground its corresponding mask was created
- - Using GIMP, the foreground was filled with white and the background was filled with black.
- - Image was stored as a grayscale image.
- - Each image was rescaled to keep height 105 and resizing width while maintaining aspect ratio.
- - Number of images: 100
- - Image dimensions: (105, width)
- - Directory size: 404K
-
-<a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_001.png" height="8%" width="8%" ></a>
+ - For every foreground, corresponding mask image was created
+ - Wrote custom [code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/mask.py) to generate foreground mask
+ - Image dimensions: (140, width)
+ - Directory size: 848k
+ 
+ <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_001.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_002.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_003.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_011.png" height="8%" width="8%" ></a>
@@ -60,7 +57,16 @@ Create a custom dataset for monocular depth estimation and segmentation simultan
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_009.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/fg_mask/mask_fg_010.png" height="8%" width="8%" ></a>
 
-Foreground-Background:
+#### Foreground Overlayed on Background (bgfg)
+ - For each background
+	 - Overlay each foreground randomly 20 times on the background
+	 - Flip the foreground and again overlay it randomly 20 times on the background
+  - [Code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/overlay.py) to generate overlay images
+ - Number of images: 99 * 99 * 2 * 20 = 3,92,040
+ - Image dimensions: (224, 224, 3)
+ - Directory size: 5.3G
+ - Mean: [0.5365, 0.4978, 0.4601]
+ - Std: [0.2671, 0.2650, 0.2799]
 
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_overlay/ol_bg001fg0011_fg_001.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_overlay/ol_bg002fg0021_fg_002.png" height="8%" width="8%" ></a>
@@ -73,8 +79,14 @@ Foreground-Background:
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_overlay/ol_bg009fg0091_fg_009.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_overlay/ol_bg010fg0101_fg_010.png" height="8%" width="8%" ></a>
 
-Foreground-Background Mask:
-
+#### Foreground Overlayed on Background Mask (bgfg_mask)
+ - For every overlayed image, corresponding mask image was created
+ - Wrote custom [code](https://github.com/anuragal/fg_bg_dataset/blob/master/utils/mask.py) to generate mask
+ - Number of images: 3,92,041
+ - Image dimensions: (224, 224)
+ - Directory size: 1.6G
+ - Mean: [0.0943]
+ - Std: [0.2856]
 
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg001fg0011_fg_001.png" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg002fg0021_fg_002.png" height="8%" width="8%" ></a>
@@ -88,7 +100,16 @@ Foreground-Background Mask:
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_mask/mask_ol_bg010fg0101_fg_010.png" height="8%" width="8%" ></a>
 
 
-Foreground-Background Depth:
+#### Foreground Overlayed on Background Depth Map (bgfg_depth)
+ - Depth map was generated for every overlay image.
+ - A pre-trained monocular depth estimation model [DenseDepth](https://github.com/anuragal/DepthModel/blob/master/DenseDepth.ipynb) was used to generate the depth maps.
+ - Image was stored as a grayscale image.
+ - Number of images: 3,92,041
+ - Image dimensions: (224, 224)
+ - Directory size: 1.6G
+ - Mean: [0.4334]
+ - Std: [0.2715]
+
 
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_depth/depth_ol_bg001fg0011_fg_001.jpg" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bgfg_depth/depth_ol_bg002fg0021_fg_002.jpg" height="8%" width="8%" ></a>
