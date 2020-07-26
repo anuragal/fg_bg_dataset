@@ -14,6 +14,9 @@ Create a custom dataset for monocular depth estimation and segmentation simultan
 7. Generate Depth maps for overlay images - [Colab](https://github.com/anuragal/DepthModel/blob/master/DenseDepth.ipynb)
 8. Calculate images dimensions - [Colab](https://github.com/anuragal/DepthModel/blob/master/generate_data_stats.ipynb)
 
+## Dataset Link
+Link to dataset - https://drive.google.com/drive/folders/1IvKUbm4WcqNUS9dkOV_gPSfCtnmPIg8Y?usp=sharing
+
 ## Dataset Samples
 
 ### Background (bg)
@@ -133,4 +136,4 @@ Create a custom dataset for monocular depth estimation and segmentation simultan
 
 
 ## Disclaimer
-I don't own any of the above images, they are downloaded from google image search. These images are only used for learning purpose. Images are owned by respecive owners. 
+I don't own any of the above images, they are downloaded from google image search. These images are only used for learning purpose. Images are owned by respective owners. 
