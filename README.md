@@ -8,9 +8,9 @@ Create a custom dataset for monocular depth estimation and segmentation simultan
 
 #### Background (bg)
  - 99 Images of places like restaurent, malls or home.
- - Each image was resized to 224 x 224. Final Image dimensions: (224, 224, 3)
- - Directory size: 1.5M
- - Mean: [0.5442, 0.5057, 0.4621], Std: [0.2609, 0.2624, 0.2799]
+ - Each image was resized to 224 x 224. Final Image dimensions: (224, 224, 3). Total size: 1.5M
+ - Mean: [0.5442, 0.5057, 0.4621]
+ - Std: [0.2609, 0.2624, 0.2799]
 
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_001.jpg" height="8%" width="8%" ></a>
 <a href="url"><img src="https://github.com/anuragal/fg_bg_dataset/blob/master/bg/bg_002.jpg" height="8%" width="8%" ></a>
